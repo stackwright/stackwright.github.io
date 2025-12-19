@@ -11,13 +11,10 @@ export const About: React.FC = () => {
       <Heading level="h2">What We Do</Heading>
       <div className={styles.content}>
         <Body size="large">
-          You have a problem. We build the solution. We make it work.
+          You have a problem. We provide your solution.
         </Body>
         <Body>
-          Systems should be reliable. They should scale. They should cost what they're worth.
-        </Body>
-        <Body>
-          We've done this before. We'll help you do it right.
+          Systems should be reliable. They should scale, and they should cost what they're worth.
         </Body>
       </div>
     </div>
