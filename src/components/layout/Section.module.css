@@ -1,0 +1,16 @@
+.section {
+  padding: var(--spacing-3xl) 0;
+  width: 100%;
+}
+
+.fullHeight {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+}

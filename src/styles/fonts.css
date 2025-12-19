@@ -1,0 +1,13 @@
+/**
+ * IBM Plex Font Family
+ * Loaded from Google Fonts with display=swap for optimal loading performance
+ */
+
+/* IBM Plex Sans - Light (300) and Regular (400) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&display=swap');
+
+/* IBM Plex Serif - Medium (500) and Semi-Bold (600) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&display=swap');
+
+/* IBM Plex Mono - Regular (400) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');

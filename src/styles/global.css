@@ -1,0 +1,192 @@
+/**
+ * Stackwright Global Styles
+ * Foundation for the "Stainless Steel & Relief" design system
+ */
+
+@import './fonts.css';
+
+/* ===== CSS Custom Properties ===== */
+:root {
+  /* Colors */
+  --color-vellum: #F7F5F0;
+  --color-gunmetal: #2A2F35;
+  --color-brushed-steel: #8C96A0;
+  --color-international-orange: #D64531;
+
+  /* Typography */
+  --font-serif: "IBM Plex Serif", Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+  --spacing-4xl: 8rem;
+  --spacing-5xl: 12rem;
+
+  /* Container */
+  --container-max-width: 1200px;
+  --container-padding: var(--spacing-md);
+
+  /* Animations */
+  --transition-duration: 0.2s;
+  --transition-easing: linear;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: var(--spacing-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: var(--spacing-2xl);
+  }
+}
+
+/* ===== CSS Reset & Base Styles ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-gunmetal);
+  background-color: var(--color-vellum);
+  min-height: 100vh;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-gunmetal);
+}
+
+p {
+  font-family: var(--font-sans);
+  line-height: 1.75;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+/* Links */
+a {
+  color: var(--color-international-orange);
+  text-decoration: none;
+  transition: color var(--transition-duration) var(--transition-easing);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-gunmetal);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-international-orange);
+  outline-offset: 2px;
+}
+
+/* Lists */
+ul, ol {
+  list-style-position: inside;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--color-international-orange);
+  outline-offset: 2px;
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Remove default focus styles, rely on :focus-visible */
+:focus {
+  outline: none;
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Ensure smooth scrolling works on all browsers */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

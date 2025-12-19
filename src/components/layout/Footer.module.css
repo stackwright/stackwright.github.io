@@ -1,0 +1,17 @@
+.footer {
+  border-top: 1px solid var(--color-brushed-steel);
+  padding: var(--spacing-2xl) 0;
+  background-color: var(--color-vellum);
+}
+
+.footerContent {
+  text-align: center;
+}
+
+.copyright {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--color-brushed-steel);
+  margin: 0;
+}

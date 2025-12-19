@@ -1,0 +1,136 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-vellum);
+  border-bottom: 1px solid var(--color-brushed-steel);
+  padding: var(--spacing-md) 0;
+  transition: box-shadow var(--transition-duration) var(--transition-easing);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoWrapper {
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-gunmetal);
+  text-decoration: none;
+  padding: var(--spacing-xs) 0;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-duration) var(--transition-easing);
+  display: inline-block;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: var(--color-international-orange);
+  border-bottom-color: var(--color-international-orange);
+}
+
+.navLink.active {
+  color: var(--color-international-orange);
+  border-bottom-color: var(--color-international-orange);
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger {
+  position: relative;
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--color-gunmetal);
+  transition: all var(--transition-duration) var(--transition-easing);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--color-gunmetal);
+  transition: all var(--transition-duration) var(--transition-easing);
+}
+
+.hamburger::before {
+  top: -0.5rem;
+}
+
+.hamburger::after {
+  top: 0.5rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    background-color: var(--color-vellum);
+    border-bottom: 1px solid var(--color-brushed-steel);
+    padding: var(--spacing-md) 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-duration) var(--transition-easing);
+  }
+
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-md);
+  }
+
+  .navLink {
+    font-size: 1.125rem;
+    padding: var(--spacing-xs) 0;
+  }
+}

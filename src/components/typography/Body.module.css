@@ -1,0 +1,28 @@
+.body {
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  color: var(--color-gunmetal);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Sizes */
+.small {
+  font-size: 0.875rem;
+}
+
+.base {
+  font-size: 1rem;
+}
+
+.large {
+  font-size: 1.125rem;
+}
+
+/* Weights */
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
