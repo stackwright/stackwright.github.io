@@ -36,7 +36,7 @@ export const Approach: React.FC = () => {
         How We Work
       </Heading>
       <Body size="large" className={styles.intro}>
-        Our process is straightforward and transparent. No buzzwords, no complexity for
+        Our process is straightforward and transparent. No buzzwords, and no complexity for
         complexity's sake—just honest, effective engineering.
       </Body>
       <div className={styles.steps}>
